@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic-Tac-Toe</h1>
+      <div id="game-setup" class="setup-form">
+        <div class="toggle-container">
+          <label class="switch">
+            <input
+              type="checkbox"
+              id="toggle-mode"
+              onchange="toggleDarkMode()"
+            />
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle-label">Switch to Dark Mode</span>
+        </div>
+        <input type="text" id="player1" placeholder="Enter Player 1's name" />
+        <input type="text" id="player2" placeholder="Enter Player 2's name" />
+        <button onclick="startGame()">Start Game</button>
+      </div>
+      <div id="game" style="display: none">
+        <h2 id="turn-info"></h2>
+        <div class="board" id="board">
+          <div class="cell" onclick="makeMove(0)"></div>
+          <div class="cell" onclick="makeMove(1)"></div>
+          <div class="cell" onclick="makeMove(2)"></div>
+          <div class="cell" onclick="makeMove(3)"></div>
+          <div class="cell" onclick="makeMove(4)"></div>
+          <div class="cell" onclick="makeMove(5)"></div>
+          <div class="cell" onclick="makeMove(6)"></div>
+          <div class="cell" onclick="makeMove(7)"></div>
+          <div class="cell" onclick="makeMove(8)"></div>
+        </div>
+        <div id="result-message"></div>
+        <button onclick="resetGame()">Reset Game</button>
+        <button onclick="rematch()">Rematch</button>
+
+        <!-- Toggle Scoreboard Button -->
+        <button id="toggle-scoreboard" onclick="toggleScoreboard()">
+          Show Scoreboard
+        </button>
+
+        <!-- Scoreboard -->
+        <div id="scoreboard" style="display: none">
+          <h3>Scoreboard</h3>
+          <p id="player1-score"></p>
+          <p id="player2-score"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  <footer>
+    © 2024 Pratham Dhakate. All rights reserved.
+  </footer>
+</html>

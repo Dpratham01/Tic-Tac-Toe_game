@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%; /* Full width for smaller screens */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* White container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+}
+
+h1 {
+    color: #ff6347; /* Tomato color */
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #4682b4; /* Steel blue */
+}
+
+/* Game Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto; /* Center the board within container */
+    justify-content: center; /* Center board horizontally */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffebcd; /* Blanched Almond */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+/* Button Styles */
+button {
+    background-color: #ff69b4; /* Hot Pink */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff1493; /* Deep Pink */
+    transform: scale(1.05);
+}
+
+#toggle-scoreboard {
+    background-color: #4682b4; /* Steel Blue for Scoreboard Toggle */
+    font-weight: bold;
+}
+
+#toggle-scoreboard:hover {
+    background-color: #4169e1; /* Royal Blue on hover */
+}
+
+/* Result Message */
+#result-message {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #32cd32; /* Lime Green for win message */
+}
+
+/* Scoreboard */
+#scoreboard {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+.dark-mode .container {
+    background-color: #333; /* Darker container */
+}
+
+.dark-mode .cell {
+    background-color: #444; /* Dark cell background */
+}
+
+.dark-mode button {
+    background-color: #ff1493; /* Consistent button color */
+}
+
+.dark-mode #result-message {
+    color: #7fff00; /* Light green */
+}
+
+/* Toggle switch styles */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50; /* Green when toggled on */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move the toggle knob */
+}
+
+.toggle-label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #ff69b4; /* Hot Pink for label */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 14px;
+}
+
+
+
